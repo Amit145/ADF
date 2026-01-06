@@ -9,7 +9,7 @@
 				"userProperties": [],
 				"typeProperties": {
 					"items": {
-						"value": "[\n  {\n    \"schema\":\"dbo\",\n    \"table\":\"DimArtist\",\n    \"cdc_col\":\"updated_at\",\n    \"from_date\":\"\"\n  }]",
+						"value": "[\n  { \"schema\":\"dbo\", \"table\":\"DimArtist\", \"cdc_col\":\"updated_at\", \"from_date\":\"\" }\n]\n",
 						"type": "Expression"
 					},
 					"activities": [
@@ -322,14 +322,12 @@
 		"parameters": {
 			"loopInput": {
 				"type": "array",
-				"defaultValue": [
-					{
-						"schema": "dbo",
-						"table": "DimArtist",
-						"cdc_col": "updated_at",
-						"from_date": ""
-					}
-				]
+				"defaultValue": {
+					"schema": "dbo",
+					"table": "DimArtist",
+					"cdc_col": "updated_at",
+					"from_date": ""
+				}
 			}
 		},
 		"variables": {
