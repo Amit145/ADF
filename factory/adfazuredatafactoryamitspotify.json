@@ -1,0 +1,9 @@
+{
+	"name": "adfazuredatafactoryamitspotify",
+	"location": "eastus",
+	"identity": {
+		"type": "SystemAssigned",
+		"principalId": "d32c0717-2aa6-4b4f-b161-9d83802f1f66",
+		"tenantId": "55879ffd-84d0-41b6-9e4a-bfe32ed439df"
+	}
+}
