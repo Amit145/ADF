@@ -9,9 +9,10 @@
 				"userProperties": [],
 				"typeProperties": {
 					"items": {
-						"value": "[\n  { \"schema\":\"dbo\", \"table\":\"DimArtist\", \"cdc_col\":\"updated_at\", \"from_date\":\"\" }\n]\n",
+						"value": "@pipeline().parameters.loopInput",
 						"type": "Expression"
 					},
+					"isSequential": true,
 					"activities": [
 						{
 							"name": "AzureSQLToLake",
@@ -322,12 +323,20 @@
 		"parameters": {
 			"loopInput": {
 				"type": "array",
-				"defaultValue": {
-					"schema": "dbo",
-					"table": "DimArtist",
-					"cdc_col": "updated_at",
-					"from_date": ""
-				}
+				"defaultValue": [
+					{
+						"schema": "dbo",
+						"table": "DimArtist",
+						"cdc_col": "updated_at",
+						"from_date": ""
+					},
+					{
+						"schema": "dbo",
+						"table": "DimUser",
+						"cdc_col": "updated_at",
+						"from_date": ""
+					}
+				]
 			}
 		},
 		"variables": {
