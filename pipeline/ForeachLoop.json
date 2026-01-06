@@ -8,6 +8,10 @@
 				"dependsOn": [],
 				"userProperties": [],
 				"typeProperties": {
+					"items": {
+						"value": "[\n  {\n    \"schema\":\"dbo\",\n    \"table\":\"DimArtist\",\n    \"cdc_col\":\"updated_at\",\n    \"from_date\":\"\"\n  }]",
+						"type": "Expression"
+					},
 					"activities": [
 						{
 							"name": "AzureSQLToLake",
